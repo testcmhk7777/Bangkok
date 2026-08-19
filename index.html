@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#167a78" />
+    <meta name="description" content="曼谷漫遊：2026 年 8 月 28 日至 9 月 1 日的五日旅行行程。" />
+    <title>曼谷漫遊｜五日旅行行程</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+      :root { --ink:#192a31; --muted:#66716f; --paper:#f7f4ec; --card:#fffefa; --teal:#167a78; --teal-dark:#0f5958; --mist:#e5f0ec; --line:#dfe5df; --coral:#e16f50; --gold:#d69c35; --radius:22px; }
+      * { box-sizing:border-box; }
+      html { scroll-behavior:smooth; }
+      body { margin:0; color:var(--ink); background:var(--paper); font-family:"Noto Sans TC",system-ui,sans-serif; }
+      button,a { font:inherit; }
+      button { cursor:pointer; }
+      .shell { width:min(1140px,calc(100% - 40px)); margin:auto; }
+      .topbar { display:flex; justify-content:space-between; align-items:center; padding:26px 0 19px; }
+      .brand { display:flex; align-items:center; gap:12px; font-weight:800; letter-spacing:.02em; }
+      .brand-mark { width:33px; height:33px; border-radius:12px 12px 12px 4px; background:var(--teal); color:#fff; display:grid; place-items:center; font-family:"DM Mono"; font-size:12px; }
+      .share-top { border:1px solid var(--line); background:rgba(255,255,255,.78); color:var(--teal-dark); padding:10px 14px; border-radius:99px; display:flex; gap:8px; align-items:center; font-size:13px; font-weight:700; transition:.16s ease; }
+      .share-top:hover,.share-top:focus-visible { background:#fff; transform:translateY(-1px); outline:3px solid #167a7830; }
+      .hero { background:linear-gradient(135deg,#167a78 0%,#167a78 64%,#0e6260 100%); color:#fff; padding:clamp(28px,5vw,58px); border-radius:34px; position:relative; overflow:hidden; }
+      .hero::after { content:""; position:absolute; width:370px; height:370px; border:1px solid #ffffff2b; border-radius:50%; right:-155px; top:-180px; box-shadow:0 0 0 46px #ffffff12,0 0 0 92px #ffffff0a; }
+      .eyebrow { position:relative; z-index:1; margin:0; color:#d5efeb; letter-spacing:.15em; font-size:12px; font-family:"DM Mono"; }
+      h1 { position:relative; z-index:1; margin:13px 0 11px; font-size:clamp(35px,6vw,62px); line-height:1.15; letter-spacing:-.055em; }
+      .hero-copy { position:relative; z-index:1; color:#e0f0ec; margin:0; font-size:16px; }
+      .hero-stats { position:relative; z-index:1; display:flex; gap:10px; flex-wrap:wrap; margin-top:31px; }
+      .stat { border:1px solid #ffffff37; background:#ffffff14; border-radius:14px; padding:10px 13px; color:#f4fffd; font-size:13px; }
+      .stat strong { font-family:"DM Mono"; margin-right:4px; }
+      .tabs-section { padding:33px 0 16px; }
+      .section-head { display:flex; align-items:end; justify-content:space-between; margin-bottom:15px; gap:15px; }
+      .section-head h2 { margin:0; font-size:24px; letter-spacing:-.04em; }
+      .section-head p { margin:0; color:var(--muted); font-size:13px; }
+      .day-tabs { display:flex; gap:10px; overflow:auto; padding:2px 1px 9px; scrollbar-width:none; }
+      .day-tab { flex:0 0 auto; min-width:112px; border:1px solid var(--line); color:var(--ink); background:var(--card); border-radius:17px; padding:12px 13px; text-align:left; transition:.18s ease; }
+      .day-tab:hover { border-color:#98c7c0; transform:translateY(-1px); }
+      .day-tab.active { color:#fff; background:var(--teal); border-color:var(--teal); box-shadow:0 9px 20px #167a7824; }
+      .tab-date { display:block; font-family:"DM Mono"; font-size:12px; opacity:.83; }
+      .tab-theme { display:block; margin-top:3px; font-weight:800; font-size:13px; white-space:nowrap; }
+      .main-grid { display:grid; grid-template-columns:minmax(0,1.6fr) minmax(270px,.7fr); gap:24px; padding:18px 0 55px; align-items:start; }
+      .day-banner { display:flex; justify-content:space-between; gap:16px; align-items:center; background:#e4efeb; padding:18px 20px; border-radius:18px; margin-bottom:16px; }
+      .day-banner small { display:block; color:var(--teal); font-family:"DM Mono"; letter-spacing:.07em; font-size:11px; }
+      .day-banner h3 { margin:4px 0 0; font-size:24px; letter-spacing:-.04em; }
+      .count { color:var(--teal-dark); font-weight:800; font-size:13px; white-space:nowrap; }
+      .timeline { position:relative; padding-left:104px; }
+      .timeline::before { content:""; position:absolute; left:88px; top:13px; bottom:26px; width:1px; background:#cfdcd5; }
+      .event { position:relative; display:grid; grid-template-columns:1fr; margin-bottom:12px; }
+      .time { position:absolute; left:-104px; top:18px; width:70px; color:var(--muted); font-family:"DM Mono"; font-size:12px; text-align:right; }
+      .pin { position:absolute; left:-31px; top:15px; width:14px; height:14px; border-radius:50%; background:var(--teal); border:3px solid var(--paper); box-shadow:0 0 0 1px #bcd8d1; }
+      .event-card { appearance:none; width:100%; border:1px solid var(--line); background:var(--card); border-radius:18px; text-align:left; padding:17px 18px; color:var(--ink); transition:.16s ease; }
+      .event-card:hover,.event-card:focus-visible { transform:translateX(3px); border-color:#91c5bd; outline:3px solid #167a7820; }
+      .event-meta { display:flex; align-items:center; justify-content:space-between; gap:10px; }
+      .category { color:var(--teal-dark); background:var(--mist); padding:3px 8px; border-radius:8px; font-size:11px; font-weight:800; }
+      .event-card h4 { margin:8px 0 2px; font-size:17px; letter-spacing:-.02em; }
+      .thai { color:var(--muted); margin:0; font-size:12px; }
+      .detail { color:var(--muted); margin:9px 0 0; font-size:13px; line-height:1.65; }
+      .arrow { color:#90a5a0; font-size:18px; }
+      .side-card { position:sticky; top:20px; background:var(--card); border:1px solid var(--line); border-radius:22px; padding:21px; }
+      .side-card h3 { margin:0; font-size:19px; letter-spacing:-.03em; }
+      .side-card p { color:var(--muted); font-size:13px; line-height:1.7; margin:8px 0 18px; }
+      .info-item { display:flex; gap:12px; align-items:flex-start; padding:13px 0; border-top:1px solid var(--line); }
+      .info-icon { width:31px; height:31px; border-radius:10px; background:var(--mist); color:var(--teal); display:grid; place-items:center; flex:none; }
+      .info-item strong { display:block; font-size:13px; }
+      .info-item span { display:block; margin-top:2px; color:var(--muted); font-size:12px; line-height:1.45; }
+      .side-share { width:100%; border:0; background:var(--teal); color:#fff; border-radius:13px; padding:13px; margin-top:16px; font-weight:800; transition:.16s ease; }
+      .side-share:hover { background:var(--teal-dark); transform:translateY(-1px); }
+      footer { border-top:1px solid var(--line); padding:21px 0 32px; color:var(--muted); font-size:12px; }
+      dialog { width:min(560px,calc(100% - 36px)); border:0; padding:0; border-radius:23px; box-shadow:0 24px 80px #11232140; color:var(--ink); }
+      dialog::backdrop { background:#1024227a; backdrop-filter:blur(4px); }
+      .modal { padding:25px; background:var(--card); }
+      .modal-top { display:flex; justify-content:space-between; gap:15px; align-items:flex-start; }
+      .modal h2 { margin:6px 0 3px; font-size:26px; letter-spacing:-.04em; }
+      .close { width:38px; height:38px; border:1px solid var(--line); background:#fff; border-radius:12px; color:var(--ink); font-size:21px; }
+      .modal-time { color:var(--teal); font-family:"DM Mono"; font-size:12px; }
+      .modal-text { color:var(--muted); line-height:1.8; margin:21px 0; font-size:14px; }
+      .map-link { display:flex; justify-content:center; gap:9px; align-items:center; background:var(--teal); color:#fff; padding:13px; border-radius:13px; text-decoration:none; font-weight:800; }
+      .toast { position:fixed; z-index:10; left:50%; bottom:23px; transform:translate(-50%,115px); background:#192a31; color:#fff; padding:12px 17px; border-radius:99px; font-size:13px; box-shadow:0 10px 24px #192a3140; transition:transform .25s ease; }
+      .toast.show { transform:translate(-50%,0); }
+      @media (max-width:760px) { .shell { width:min(100% - 28px,650px); } .topbar { padding:17px 0; } .share-top span { display:none; } .hero { border-radius:25px; padding:29px 24px; } .hero-stats { margin-top:24px; } .main-grid { grid-template-columns:1fr; padding-top:7px; } .side-card { position:static; order:-1; } .side-card .info-item:nth-of-type(n+3) { display:none; } .timeline { padding-left:80px; } .timeline::before { left:67px; } .time { left:-80px; width:51px; font-size:11px; } .pin { left:-20px; } .event-card { padding:15px; } .day-tab { min-width:100px; } .section-head h2 { font-size:21px; } }
+      @media (prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto!important; transition:none!important; } }
+
+      /* Bangkok editorial travel layer */
+      body { background-color:#f7f2e7; background-image:radial-gradient(circle at 7% 18%,#e6eee436 0 105px,transparent 106px),radial-gradient(circle at 93% 72%,#e16f5012 0 140px,transparent 141px),linear-gradient(90deg,#ffffff33 1px,transparent 1px),linear-gradient(#ffffff33 1px,transparent 1px); background-size:auto,auto,24px 24px,24px 24px; }
+      body::before { content:""; position:fixed; pointer-events:none; inset:0; opacity:.34; background:linear-gradient(112deg,transparent 20%,#d69c3507 20.2% 20.4%,transparent 20.6% 69%,#167a7808 69.2% 69.4%,transparent 69.6%); }
+      .topbar { position:relative; }
+      .topbar::after { content:"TRAVEL NOTES"; position:absolute; right:145px; color:#167a7878; font-family:"DM Mono"; font-size:10px; letter-spacing:.14em; }
+      .brand-mark { box-shadow:5px 5px 0 #d69c3550; transform:rotate(-3deg); }
+      .share-top { box-shadow:3px 3px 0 #d69c3547; border-color:#d4c9b3; }
+      .hero { border:1px solid #0d5d5a; box-shadow:0 25px 40px #125b5920,7px 7px 0 #d69c3573; isolation:isolate; }
+      .hero::before { content:""; position:absolute; inset:auto -11% -28% 35%; height:62%; border-radius:50% 50% 0 0; border:1px solid #e4f3ed45; transform:rotate(-7deg); background:repeating-radial-gradient(ellipse at 42% 100%,transparent 0 20px,#e5f1ec1a 21px 22px,transparent 23px 43px); }
+      .hero::after { width:460px; height:460px; right:-204px; top:-250px; border-color:#ffffff42; box-shadow:0 0 0 46px #ffffff10,0 0 0 92px #ffffff0b,0 0 0 139px #ffffff08; }
+      .hero-scene { position:absolute; z-index:0; right:20px; bottom:14px; width:min(42%,350px); opacity:.94; pointer-events:none; }
+      .hero-scene svg { width:100%; height:auto; overflow:visible; }
+      .hero .eyebrow,.hero h1,.hero .hero-copy,.hero .hero-stats { z-index:2; }
+      .hero h1 { text-shadow:0 3px 0 #0a504e50; }
+      .hero-copy { max-width:540px; }
+      .stat { backdrop-filter:blur(6px); box-shadow:inset 0 1px #ffffff26; }
+      .travel-tape { margin-top:17px; display:flex; align-items:center; gap:13px; color:#856932; font-family:"DM Mono"; font-size:10px; letter-spacing:.13em; overflow:hidden; white-space:nowrap; }
+      .travel-tape::before,.travel-tape::after { content:""; height:1px; width:60px; background:#d69c35; flex:none; }
+      .day-tabs { gap:12px; }
+      .day-tab { position:relative; overflow:hidden; border-radius:7px 16px 16px 7px; border-color:#d9d1c0; box-shadow:3px 3px 0 #d69c3524; }
+      .day-tab::after { content:""; position:absolute; top:0; bottom:0; left:10px; width:1px; border-left:1px dashed #8a9f9880; }
+      .day-tab .tab-date,.day-tab .tab-theme { position:relative; padding-left:9px; }
+      .day-tab.active { box-shadow:4px 4px 0 #e16f5073; }
+      .day-banner { position:relative; overflow:hidden; background:linear-gradient(102deg,#e6f1ec,#dcece5); border:1px solid #caddd4; box-shadow:4px 4px 0 #d69c3530; }
+      .day-banner::after { content:"✦"; position:absolute; right:20px; color:#d69c35; font-size:48px; opacity:.47; transform:rotate(12deg); }
+      .day-banner > * { position:relative; z-index:1; }
+      .timeline::before { background:linear-gradient(#d69c35,#c9ddd4 17%,#c9ddd4 83%,#e16f50); }
+      .pin { background:var(--teal); box-shadow:0 0 0 1px #bcd8d1,0 0 0 5px #f7f2e7; }
+      .event:nth-child(3n) .pin { background:#e16f50; box-shadow:0 0 0 1px #e5b09e,0 0 0 5px #f7f2e7; }
+      .event-card { position:relative; overflow:hidden; border-radius:10px 18px 18px 18px; box-shadow:3px 4px 0 #162f2a0c; }
+      .event-card::before { content:""; position:absolute; left:0; top:0; bottom:0; width:4px; background:#d3e5df; }
+      .event:nth-child(3n) .event-card::before { background:#efb090; }
+      .event-card:hover { box-shadow:5px 6px 0 #d69c3533; }
+      .category { font-family:"DM Mono"; letter-spacing:.04em; }
+      .category.dining { color:#9b4835; background:#f9e3d9; }.category.coffee { color:#75572a; background:#f3e8cf; }.category.culture { color:#806319; background:#f8edcc; }.category.concert { color:#704187; background:#f0e3f4; }.category.travel { color:#267390; background:#e0eff5; }.category.shopping { color:#536a36; background:#e7efdc; }.category.departure { color:#a6483e; background:#f8e0db; }
+      .side-card { position:relative; overflow:hidden; border-color:#d8cfbd; box-shadow:7px 7px 0 #d69c3527; background:linear-gradient(150deg,#fffefa,#fbf7ec); }
+      .side-card::after { content:""; position:absolute; width:140px; height:140px; right:-72px; top:-72px; border:1px solid #d69c356b; transform:rotate(45deg); box-shadow:0 0 0 14px #d69c3511,0 0 0 28px #d69c350a; }
+      .side-card > * { position:relative; z-index:1; }
+      .info-icon { background:#f5ead1; color:#986c18; }
+      .side-share { box-shadow:4px 4px 0 #e16f5070; }
+      footer { position:relative; background:#25304a; color:#e5eee9; border-top:4px solid #d69c35; }
+      footer::before { content:"✦  CHAO PHRAYA  ·  NIGHT MARKET  ·  TEMPLE DAYS  ·  COFFEE STOPS  ·"; display:block; position:absolute; left:0; right:0; top:-18px; color:#d69c35; font-family:"DM Mono"; font-size:9px; letter-spacing:.14em; overflow:hidden; white-space:nowrap; }
+      @media (max-width:760px) { .topbar::after { display:none; } .hero-scene { width:53%; right:-2px; bottom:1px; opacity:.72; } .hero h1 { font-size:36px; max-width:280px; } .travel-tape { margin-top:14px; } .travel-tape::before,.travel-tape::after { width:25px; } .event-card { border-radius:9px 15px 15px 15px; } }
+    </style>
+  </head>
+  <body>
+    <header class="shell topbar">
+      <div class="brand"><span class="brand-mark">BKK</span><span>曼谷漫遊</span></div>
+      <button class="share-top" type="button" onclick="sharePage()">↗ <span>分享行程</span></button>
+    </header>
+    <main class="shell">
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-scene" aria-hidden="true">
+          <svg viewBox="0 0 420 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17 231C80 193 143 240 208 214C270 189 341 210 412 177" stroke="#DDF1EC" stroke-width="2" stroke-linecap="round" opacity=".62" />
+            <path d="M29 246C101 208 172 258 241 229C310 201 358 221 405 202" stroke="#DDF1EC" stroke-width="1.4" stroke-linecap="round" opacity=".5" />
+            <path d="M242 190H333L316 207H259L242 190Z" fill="#F8F0D9" />
+            <path d="M264 187L280 152L291 187M283 152L303 131L312 187" stroke="#F8F0D9" stroke-width="4" stroke-linejoin="round" />
+            <path d="M291 131V106M291 106L280 120M291 106L302 120" stroke="#D69C35" stroke-width="3" stroke-linecap="round" />
+            <path d="M55 211C81 206 120 206 150 211L137 224H69L55 211Z" fill="#E16F50" />
+            <path d="M101 208L121 166" stroke="#F8F0D9" stroke-width="3" stroke-linecap="round" />
+            <path d="M118 167L169 181" stroke="#F8F0D9" stroke-width="3" stroke-linecap="round" />
+            <path d="M136 202L188 136" stroke="#F8F0D9" stroke-width="3" stroke-linecap="round" opacity=".8" />
+            <path d="M174 137L203 158" stroke="#F8F0D9" stroke-width="3" stroke-linecap="round" opacity=".8" />
+            <circle cx="351" cy="87" r="30" stroke="#D69C35" stroke-width="2" opacity=".75" />
+            <path d="M351 45V30M351 144V129M309 87H294M408 87H393M321 57L310 46M381 117L392 128M381 57L392 46M321 117L310 128" stroke="#D69C35" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </div>
+        <p class="eyebrow">BANGKOK · 2026.08.28 — 09.01</p>
+        <h1 id="page-title">五日曼谷，<br />慢慢走，也剛剛好。</h1>
+        <p class="hero-copy">餐廳、咖啡、Koh Kret、佛統一日遊與演唱會的同行行程表。</p>
+        <div class="hero-stats"><div class="stat"><strong>5</strong> DAYS</div><div class="stat"><strong>25</strong> 行程節點</div><div class="stat"><strong>0</strong> 登入需求</div></div>
+      </section>
+      <div class="travel-tape"><span>CHAO PHRAYA RIVER</span><span>·</span><span>FOOD, TEMPLES &amp; NIGHT LIGHTS</span></div>
+      <section class="tabs-section" aria-labelledby="itinerary-title">
+        <div class="section-head"><div><p>選擇日期</p><h2 id="itinerary-title">旅程節奏</h2></div><p id="day-note">點選景點查看詳情</p></div>
+        <div class="day-tabs" id="day-tabs" aria-label="行程日期"></div>
+      </section>
+      <section class="main-grid">
+        <div>
+          <div class="day-banner"><div><small id="day-label">DAY 01 · 8/28（週五）</small><h3 id="day-theme">抵達＋泰式陶鍋</h3></div><span class="count" id="day-count">3 站</span></div>
+          <div class="timeline" id="timeline"></div>
+        </div>
+        <aside class="side-card" aria-label="旅行摘要">
+          <h3>旅伴小抄</h3><p>這個網頁不用下載 App。把網址貼到群組，手機或電腦都能直接查看。</p>
+          <div class="info-item"><div class="info-icon">⌂</div><div><strong>住宿</strong><span>โรงแรม มาร์วิน เทอร์ร่า<br />Marvin Suites Hotel</span></div></div>
+          <div class="info-item"><div class="info-icon">↘</div><div><strong>抵達曼谷</strong><span>8/28（五）20:00 · BKK</span></div></div>
+          <div class="info-item"><div class="info-icon">↗</div><div><strong>返程航班</strong><span>9/1（二）19:40 · BKK</span></div></div>
+          <button class="side-share" type="button" onclick="sharePage()">分享這個行程</button>
+        </aside>
+      </section>
+    </main>
+    <footer><div class="shell">曼谷漫遊 · 旅伴共用行程 · 2026</div></footer>
+    <dialog id="event-modal"><div class="modal"><div class="modal-top"><div><div class="modal-time" id="modal-time"></div><h2 id="modal-title"></h2><p class="thai" id="modal-thai"></p></div><button class="close" aria-label="關閉" onclick="eventModal.close()">×</button></div><p class="modal-text" id="modal-detail"></p><a id="map-link" class="map-link" target="_blank" rel="noreferrer">在 Google Maps 搜尋 ↗</a></div></dialog>
+    <div class="toast" id="toast" role="status"></div>
+    <script>
+      const tripDays = [
+        { date:'8/28', weekday:'五', theme:'抵達＋泰式陶鍋', events:[
+          ['20:00','抵達曼谷','arrival','抵達 BKK 後，依序前往飯店辦理入住。','Suvarnabhumi Airport Bangkok'],
+          ['抵達後','โรงแรม มาร์วิน เทอร์ร่า','stay','入住飯店、安放行李後再前往晚餐。','Marvin Suites Hotel Bangkok','Marvin Suites Hotel'],
+          ['入住後','Chim Chum Suthiporn','dining','以泰式陶鍋作為抵達曼谷後的第一餐。','Chim Chum Suthiporn Bangkok'] ]},
+        { date:'8/29', weekday:'六', theme:'船面＋Ari＋演唱會', events:[
+          ['中午','Boat Noodles','dining','中午先吃船面，接著前往 Ari 區域。','Toy Kuay Teow Ruea Bangkok','Toy Kuay Teow Ruea'],
+          ['午餐後','Café Amazon Experience Ari','coffee','在 Ari 停留喝咖啡，並預留前往演唱會場地的交通時間。','Cafe Amazon Experience Ari Bangkok'],
+          ['最遲 14:00','離開 Ari','travel','建議約 14:00 前離開 Ari，前往 Impact Arena。','Impact Arena Bangkok'],
+          ['15:00–23:00','Impact Arena','concert','演唱會活動時段。','Impact Arena Muang Thong Thani'] ]},
+        { date:'8/30', weekday:'日', theme:'Mia＋Koh Kret', events:[
+          ['12:00','MIA Bangkok','dining','中午用餐後，下午前往陶瓷島。','MIA Bangkok'],
+          ['15:00','陶瓷島 Koh Kret','culture','下午抵達 Koh Kret，安排島上散步與陶瓷探索。','Koh Kret Nonthaburi'],
+          ['18:00','離開 Koh Kret','travel','於傍晚離島，接續採買與晚間行程。','Koh Kret Pier Nonthaburi'],
+          ['離島後','Big C','shopping','採買完成後先回飯店休息。','Big C Bangkok'],
+          ['晚上','Maldives Pub & Restaurant','dining','晚間用餐安排。','Maldives Pub Restaurant Bangkok'] ]},
+        { date:'8/31', weekday:'一', theme:'佛統一日遊', events:[
+          ['08:00','從酒店出發','travel','出發前往佛統府，展開一日行程。','Nakhon Pathom Thailand'],
+          ['上午','Wat Sam Phran 龍廟','culture','佛統一日遊的第一站。','Wat Sam Phran Nakhon Pathom'],
+          ['接續前往','Don Wai Floating Market','culture','在水上市場停留與用餐。','Don Wai Floating Market Nakhon Pathom'],
+          ['午間','Kung Ob Phu Khao Fai','dining','火山蝦用餐安排。','Kung Ob Phu Khao Fai Nakhon Pathom','火山蝦'],
+          ['下午','Dubua Cafe','coffee','在返回夜市前於咖啡空間稍作停留。','Dubua Cafe Nakhon Pathom'],
+          ['傍晚','Phra Pathom Chedi','culture','參觀佛統大塔，並在夜市享用晚餐。','Phra Pathom Chedi Nakhon Pathom','佛統大塔'],
+          ['約 18:00／20:30','回曼谷','travel','依當日安排返回曼谷。','Bangkok Thailand'] ]},
+        { date:'9/1', weekday:'二', theme:'咖啡＋海南雞＋Nextopia', events:[
+          ['早上','Factory Coffee & Brew Bar','coffee','從咖啡開始最後一天的曼谷行程。','Factory Coffee Bangkok'],
+          ['午餐','興興海南雞飯','dining','午餐享用海南雞飯。','เฮง เฮง ข้าวมันไก่ Bangkok','เฮง เฮง ข้าวมันไก่'],
+          ['中午','Nextopia Siam Paragon','shopping','安排前往 Nextopia；After You 與 Mega Bangna 為同日備選。','Nextopia Siam Paragon Bangkok','After You／Mega Bangna'],
+          ['下午','回酒店拿行李','stay','離開市區前返回酒店領取行李。','Marvin Suites Hotel Bangkok'],
+          ['17:40','抵達 BKK','departure','建議依航班所需時間抵達機場。','Suvarnabhumi Airport Bangkok'],
+          ['19:40','返程航班','departure','曼谷旅程結束，準備登機返程。','Suvarnabhumi Airport Bangkok'] ]}
+      ];
+      const labels={arrival:'抵達',stay:'住宿',dining:'餐飲',coffee:'咖啡',culture:'景點',travel:'交通',concert:'活動',shopping:'採買',departure:'返程'};
+      const tabs=document.getElementById('day-tabs'), timeline=document.getElementById('timeline'), eventModal=document.getElementById('event-modal');
+      let selected=0;
+      function render(){ const day=tripDays[selected]; document.getElementById('day-label').textContent=`DAY ${String(selected+1).padStart(2,'0')} · ${day.date}（週${day.weekday}）`; document.getElementById('day-theme').textContent=day.theme; document.getElementById('day-count').textContent=`${day.events.length} 站`;
+        tabs.innerHTML=tripDays.map((d,i)=>`<button class="day-tab ${i===selected?'active':''}" onclick="selectDay(${i})"><span class="tab-date">週${d.weekday} · ${d.date}</span><span class="tab-theme">${d.theme}</span></button>`).join('');
+        timeline.innerHTML=day.events.map((e,i)=>`<article class="event"><span class="time">${e[0]}</span><span class="pin"></span><button class="event-card" onclick="openEvent(${i})"><div class="event-meta"><span class="category ${e[2]}">${labels[e[2]]}</span><span class="arrow">›</span></div><h4>${e[1]}</h4>${e[5]?`<p class="thai">${e[5]}</p>`:''}<p class="detail">${e[3]}</p></button></article>`).join(''); }
+      function selectDay(i){ selected=i; render(); }
+      function openEvent(i){ const e=tripDays[selected].events[i]; document.getElementById('modal-time').textContent=`${tripDays[selected].date}（週${tripDays[selected].weekday}）· ${e[0]} · ${labels[e[2]]}`; document.getElementById('modal-title').textContent=e[1]; document.getElementById('modal-thai').textContent=e[5]||''; document.getElementById('modal-detail').textContent=e[3]; document.getElementById('map-link').href=`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(e[4])}`; eventModal.showModal(); }
+      async function sharePage(){ const text='一起查看《曼谷漫遊》五日行程！8/28（五）— 9/1（二），含餐廳、咖啡、Koh Kret、佛統一日遊與演唱會安排。'; try { if(navigator.share){ await navigator.share({title:'曼谷漫遊｜五日旅行行程',text,url:location.href}); return; } await navigator.clipboard.writeText(location.href); toast('網址已複製，貼到群組即可分享'); } catch { toast('請直接複製瀏覽器網址分享'); } }
+      let toastTimer; function toast(text){ const el=document.getElementById('toast'); el.textContent=text; el.classList.add('show'); clearTimeout(toastTimer); toastTimer=setTimeout(()=>el.classList.remove('show'),2600); }
+      render();
+    </script>
+  </body>
+</html>
