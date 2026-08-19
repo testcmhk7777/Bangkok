@@ -11,3 +11,7 @@
 ## 9/1 咖啡更新
 
 最後一天的 Factory Coffee & Brew Bar 已移除並改為「晨間咖啡待定」。旅伴小抄顯示 Roots at Sathon、% Arabica Empire Tower 與 NaNa Coffee Roasters Bangna 三項候選，皆附 Google Maps 搜尋連結；公開網站在靜態伺服器重新啟動後可正常讀取。
+
+## 行程版面簡化
+
+正式 GitHub Pages 網站已更新為單欄行程版面，首頁不再顯示「旅伴小抄」。以版本參數重新載入後，5 日日期籤與行程時間軸仍可正常顯示；咖啡候選會在選擇 9/1 時直接呈現於「晨間咖啡待定」事件下方。
