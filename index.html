@@ -40,7 +40,7 @@
       .day-tab.active { color:#fff; background:var(--teal); border-color:var(--teal); box-shadow:0 9px 20px #167a7824; }
       .tab-date { display:block; font-family:"DM Mono"; font-size:12px; opacity:.83; }
       .tab-theme { display:block; margin-top:3px; font-weight:800; font-size:13px; white-space:nowrap; }
-      .main-grid { display:grid; grid-template-columns:minmax(0,1.6fr) minmax(270px,.7fr); gap:24px; padding:18px 0 55px; align-items:start; }
+      .main-grid { display:grid; grid-template-columns:minmax(0,1fr); gap:24px; padding:18px 0 55px; align-items:start; }
       .day-banner { display:flex; justify-content:space-between; gap:16px; align-items:center; background:#e4efeb; padding:18px 20px; border-radius:18px; margin-bottom:16px; }
       .day-banner small { display:block; color:var(--teal); font-family:"DM Mono"; letter-spacing:.07em; font-size:11px; }
       .day-banner h3 { margin:4px 0 0; font-size:24px; letter-spacing:-.04em; }
@@ -52,6 +52,13 @@
       .pin { position:absolute; left:-31px; top:15px; width:14px; height:14px; border-radius:50%; background:var(--teal); border:3px solid var(--paper); box-shadow:0 0 0 1px #bcd8d1; }
       .event-card { appearance:none; width:100%; border:1px solid var(--line); background:var(--card); border-radius:18px; text-align:left; padding:17px 18px; color:var(--ink); transition:.16s ease; }
       .event-card:hover,.event-card:focus-visible { transform:translateX(3px); border-color:#91c5bd; outline:3px solid #167a7820; }
+      .coffee-event-options { margin:0 0 17px; padding:14px 16px; border:1px solid #d9c77e; border-radius:0 0 18px 18px; background:#fff9e8; box-shadow:3px 4px 0 #d69c3525; }
+      .coffee-event-label { margin:0 0 7px; color:#806319; font-family:"DM Mono"; font-size:10px; letter-spacing:.09em; }
+      .coffee-event-link { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:10px 0; border-top:1px solid #e8ddb5; color:var(--ink); text-decoration:none; }
+      .coffee-event-link:first-of-type { border-top:0; }
+      .coffee-event-link strong { display:block; font-size:13px; }
+      .coffee-event-link small { display:block; margin-top:2px; color:var(--muted); font-size:11px; line-height:1.4; }
+      .coffee-event-link span { color:#a2761d; font-family:"DM Mono"; }
       .event-meta { display:flex; align-items:center; justify-content:space-between; gap:10px; }
       .category { color:var(--teal-dark); background:var(--mist); padding:3px 8px; border-radius:8px; font-size:11px; font-weight:800; }
       .event-card h4 { margin:8px 0 2px; font-size:17px; letter-spacing:-.02em; }
@@ -172,20 +179,6 @@
           <div class="day-banner"><div><small id="day-label">DAY 01 · 8/28（週五）</small><h3 id="day-theme">抵達＋泰式陶鍋</h3></div><span class="count" id="day-count">3 站</span></div>
           <div class="timeline" id="timeline"></div>
         </div>
-        <aside class="side-card" aria-label="旅行摘要">
-          <h3>旅伴小抄</h3><p>這個網頁不用下載 App。把網址貼到群組，手機或電腦都能直接查看。</p>
-          <div class="info-item"><div class="info-icon">⌂</div><div><strong>住宿</strong><span>โรงแรม มาร์วิน เทอร์ร่า<br />Marvin Suites Hotel</span></div></div>
-          <div class="info-item"><div class="info-icon">↘</div><div><strong>抵達曼谷</strong><span>8/28（五）20:00 · BKK</span></div></div>
-          <div class="info-item"><div class="info-icon">↗</div><div><strong>返程航班</strong><span>9/1（二）19:40 · BKK</span></div></div>
-          <button class="side-share" type="button" onclick="sharePage()">分享這個行程</button>
-          <section class="coffee-shortlist" aria-label="最後一天咖啡候選">
-            <p class="coffee-kicker">DAY 05 · COFFEE TO BE DECIDED</p>
-            <h3>最後一天咖啡候選</h3>
-            <a class="coffee-option" target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/?api=1&query=Roots%20at%20Sathon%20Bangkok"><span><strong>Roots at Sathon</strong><small>早開，適合市區晨間安排</small></span><span>↗</span></a>
-            <a class="coffee-option" target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/?api=1&query=%25%20Arabica%20Bangkok%20Empire%20Tower"><span><strong>% Arabica Empire Tower</strong><small>55 樓景觀，適合想喝咖啡兼看城市</small></span><span>↗</span></a>
-            <a class="coffee-option" target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/?api=1&query=Nana%20Coffee%20Roasters%20Bangna"><span><strong>NaNa Coffee Roasters Bangna</strong><small>若改去 Mega Bangna，動線較順</small></span><span>↗</span></a>
-          </section>
-        </aside>
       </section>
     </main>
     <footer><div class="shell">曼谷漫遊 · 旅伴共用行程 · 2026</div></footer>
@@ -217,7 +210,7 @@
           ['傍晚','Phra Pathom Chedi','culture','參觀佛統大塔，並在夜市享用晚餐。','Phra Pathom Chedi Nakhon Pathom','佛統大塔'],
           ['約 18:00／20:30','回曼谷','travel','依當日安排返回曼谷。','Bangkok Thailand'] ]},
         { date:'9/1', weekday:'二', theme:'咖啡＋海南雞＋Nextopia', events:[
-          ['早上','晨間咖啡待定','coffee','Factory Coffee & Brew Bar 改為待定；可依當日動線從 Roots at Sathon、% Arabica Empire Tower 或 NaNa Coffee Roasters Bangna 選擇。','Bangkok Thailand','咖啡候選見旅伴小抄'],
+          ['早上','晨間咖啡待定','coffee','Factory Coffee & Brew Bar 改為待定；可依當日動線從下方三間咖啡店擇一。','Bangkok Thailand','從下方候選選擇'],
           ['午餐','興興海南雞飯','dining','午餐享用海南雞飯。','เฮง เฮง ข้าวมันไก่ Bangkok','เฮง เฮง ข้าวมันไก่'],
           ['中午','Nextopia Siam Paragon','shopping','安排前往 Nextopia；After You 與 Mega Bangna 為同日備選。','Nextopia Siam Paragon Bangkok','After You／Mega Bangna'],
           ['下午','回酒店拿行李','stay','離開市區前返回酒店領取行李。','Marvin Suites Hotel Bangkok'],
@@ -229,7 +222,7 @@
       let selected=0;
       function render(){ const day=tripDays[selected]; document.getElementById('day-label').textContent=`DAY ${String(selected+1).padStart(2,'0')} · ${day.date}（週${day.weekday}）`; document.getElementById('day-theme').textContent=day.theme; document.getElementById('day-count').textContent=`${day.events.length} 站`;
         tabs.innerHTML=tripDays.map((d,i)=>`<button class="day-tab ${i===selected?'active':''}" onclick="selectDay(${i})"><span class="tab-date">週${d.weekday} · ${d.date}</span><span class="tab-theme">${d.theme}</span></button>`).join('');
-        timeline.innerHTML=day.events.map((e,i)=>`<article class="event"><span class="time">${e[0]}</span><span class="pin"></span><button class="event-card" onclick="openEvent(${i})"><div class="event-meta"><span class="category ${e[2]}">${labels[e[2]]}</span><span class="arrow">›</span></div><h4>${e[1]}</h4>${e[5]?`<p class="thai">${e[5]}</p>`:''}<p class="detail">${e[3]}</p></button></article>`).join(''); }
+        timeline.innerHTML=day.events.map((e,i)=>{ const options=(selected===4&&i===0)?`<div class="coffee-event-options"><p class="coffee-event-label">COFFEE TO BE SELECTED</p><a class="coffee-event-link" target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/?api=1&query=Roots%20at%20Sathon%20Bangkok"><span><strong>Roots at Sathon</strong><small>早開，適合市區晨間安排</small></span><span>↗</span></a><a class="coffee-event-link" target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/?api=1&query=%25%20Arabica%20Bangkok%20Empire%20Tower"><span><strong>% Arabica Empire Tower</strong><small>55 樓景觀，適合想喝咖啡兼看城市</small></span><span>↗</span></a><a class="coffee-event-link" target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/?api=1&query=Nana%20Coffee%20Roasters%20Bangna"><span><strong>NaNa Coffee Roasters Bangna</strong><small>若改去 Mega Bangna，動線較順</small></span><span>↗</span></a></div>`:''; return `<article class="event"><span class="time">${e[0]}</span><span class="pin"></span><button class="event-card" onclick="openEvent(${i})"><div class="event-meta"><span class="category ${e[2]}">${labels[e[2]]}</span><span class="arrow">›</span></div><h4>${e[1]}</h4>${e[5]?`<p class="thai">${e[5]}</p>`:''}<p class="detail">${e[3]}</p></button>${options}</article>`; }).join(''); }
       function selectDay(i){ selected=i; render(); }
       function openEvent(i){ const e=tripDays[selected].events[i]; document.getElementById('modal-time').textContent=`${tripDays[selected].date}（週${tripDays[selected].weekday}）· ${e[0]} · ${labels[e[2]]}`; document.getElementById('modal-title').textContent=e[1]; document.getElementById('modal-thai').textContent=e[5]||''; document.getElementById('modal-detail').textContent=e[3]; document.getElementById('map-link').href=`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(e[4])}`; eventModal.showModal(); }
       async function sharePage(){ const text='一起查看《曼谷漫遊》五日行程！8/28（五）— 9/1（二），含餐廳、咖啡、Koh Kret、佛統一日遊與演唱會安排。'; try { if(navigator.share){ await navigator.share({title:'曼谷漫遊｜五日旅行行程',text,url:location.href}); return; } await navigator.clipboard.writeText(location.href); toast('網址已複製，貼到群組即可分享'); } catch { toast('請直接複製瀏覽器網址分享'); } }

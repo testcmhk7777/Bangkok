@@ -16,3 +16,4 @@
 - [x] 由代理人建立公開 GitHub 儲存庫 bangkok-wander-web 並推送網站
 - [x] 使用者已建立 GitHub 儲存庫，待確認後推送網站與 Pages 設定
 - [x] GitHub Pages 已啟用，待重新觸發並驗證正式發布
+- [x] 移除旅伴小抄側欄並將咖啡候選整合至 9/1 行程
