@@ -67,6 +67,13 @@
       .info-item span { display:block; margin-top:2px; color:var(--muted); font-size:12px; line-height:1.45; }
       .side-share { width:100%; border:0; background:var(--teal); color:#fff; border-radius:13px; padding:13px; margin-top:16px; font-weight:800; transition:.16s ease; }
       .side-share:hover { background:var(--teal-dark); transform:translateY(-1px); }
+      .coffee-shortlist { margin-top:18px; padding:16px; border-radius:17px; background:#25304a; color:#fff; box-shadow:4px 4px 0 #d69c3566; }
+      .coffee-kicker { margin:0; color:#e9c977; font-family:"DM Mono"; font-size:10px; letter-spacing:.11em; }
+      .coffee-shortlist h3 { margin:5px 0 11px; color:#fff; font-size:17px; }
+      .coffee-option { display:flex; align-items:center; justify-content:space-between; gap:8px; padding:9px 0; border-top:1px solid #ffffff1f; text-decoration:none; color:#fff; }
+      .coffee-option strong { display:block; font-size:12px; }
+      .coffee-option small { display:block; margin-top:2px; color:#ced7dc; font-size:10px; line-height:1.35; }
+      .coffee-option span { color:#e9c977; font-family:"DM Mono"; font-size:12px; }
       footer { border-top:1px solid var(--line); padding:21px 0 32px; color:var(--muted); font-size:12px; }
       dialog { width:min(560px,calc(100% - 36px)); border:0; padding:0; border-radius:23px; box-shadow:0 24px 80px #11232140; color:var(--ink); }
       dialog::backdrop { background:#1024227a; backdrop-filter:blur(4px); }
@@ -171,6 +178,13 @@
           <div class="info-item"><div class="info-icon">↘</div><div><strong>抵達曼谷</strong><span>8/28（五）20:00 · BKK</span></div></div>
           <div class="info-item"><div class="info-icon">↗</div><div><strong>返程航班</strong><span>9/1（二）19:40 · BKK</span></div></div>
           <button class="side-share" type="button" onclick="sharePage()">分享這個行程</button>
+          <section class="coffee-shortlist" aria-label="最後一天咖啡候選">
+            <p class="coffee-kicker">DAY 05 · COFFEE TO BE DECIDED</p>
+            <h3>最後一天咖啡候選</h3>
+            <a class="coffee-option" target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/?api=1&query=Roots%20at%20Sathon%20Bangkok"><span><strong>Roots at Sathon</strong><small>早開，適合市區晨間安排</small></span><span>↗</span></a>
+            <a class="coffee-option" target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/?api=1&query=%25%20Arabica%20Bangkok%20Empire%20Tower"><span><strong>% Arabica Empire Tower</strong><small>55 樓景觀，適合想喝咖啡兼看城市</small></span><span>↗</span></a>
+            <a class="coffee-option" target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/?api=1&query=Nana%20Coffee%20Roasters%20Bangna"><span><strong>NaNa Coffee Roasters Bangna</strong><small>若改去 Mega Bangna，動線較順</small></span><span>↗</span></a>
+          </section>
         </aside>
       </section>
     </main>
@@ -203,7 +217,7 @@
           ['傍晚','Phra Pathom Chedi','culture','參觀佛統大塔，並在夜市享用晚餐。','Phra Pathom Chedi Nakhon Pathom','佛統大塔'],
           ['約 18:00／20:30','回曼谷','travel','依當日安排返回曼谷。','Bangkok Thailand'] ]},
         { date:'9/1', weekday:'二', theme:'咖啡＋海南雞＋Nextopia', events:[
-          ['早上','Factory Coffee & Brew Bar','coffee','從咖啡開始最後一天的曼谷行程。','Factory Coffee Bangkok'],
+          ['早上','晨間咖啡待定','coffee','Factory Coffee & Brew Bar 改為待定；可依當日動線從 Roots at Sathon、% Arabica Empire Tower 或 NaNa Coffee Roasters Bangna 選擇。','Bangkok Thailand','咖啡候選見旅伴小抄'],
           ['午餐','興興海南雞飯','dining','午餐享用海南雞飯。','เฮง เฮง ข้าวมันไก่ Bangkok','เฮง เฮง ข้าวมันไก่'],
           ['中午','Nextopia Siam Paragon','shopping','安排前往 Nextopia；After You 與 Mega Bangna 為同日備選。','Nextopia Siam Paragon Bangkok','After You／Mega Bangna'],
           ['下午','回酒店拿行李','stay','離開市區前返回酒店領取行李。','Marvin Suites Hotel Bangkok'],
